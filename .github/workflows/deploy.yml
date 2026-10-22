@@ -7,13 +7,13 @@ concurrency:
 on:
   schedule:
     # 凌晨任务：北京时间每天 01:07（UTC 前一天 17:07），避开 GitHub Actions 整点高峰
-    - cron: '59 11 * * *'
+    - cron: '25 12 * * *'
     # 早间任务：北京时间每天 05:00（UTC 前一天 21:00）
     #- cron: '0 21 * * *'
     # 午间任务：北京时间每天 11:40（UTC 03:40）
     - cron: '40 3 * * *'
     # 晚间任务：北京时间每天 22:00（UTC 14:00）
-    - cron: '0 11 * * *'
+    # - cron: '0 11 * * *'
   workflow_dispatch:  # 手动触发
 
 jobs:
